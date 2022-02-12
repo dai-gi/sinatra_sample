@@ -14,7 +14,7 @@
       <h1>BOARD</h1>
       <p>掲示板</p>
     </div>
-    <form action="#" method="">
+    <form action="create" method="POST">
       <table class="contact">
         <tr class="contact_line">
           <th class="contact_sign">ポイント</th>
@@ -38,6 +38,9 @@
     </form>
   </section>
   <section class="section_inner post_area">
+  <% if @comment.length > 10 %>
+    <%= @comment %>
+  <% end %>
   </section>
 </body>
 
