@@ -12,8 +12,15 @@ end
 post '/create' do
   point = params[:point]
   comment = params[:comment]
-  "ポイント :#{point}　コメント :#{comment}"
+  save_file(point: point, comment: comment)
   redirect '/'
+end
+
+def save_file(point:, comment:)
+  post = "ポイント :#{point}　コメント :#{comment}"
+  File.open("data.txt", "a") do |f|
+    f.puts(post)
+  end
 end
 
 # please access this URL: http://localhost:4567
