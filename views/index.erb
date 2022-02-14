@@ -38,6 +38,11 @@
     </form>
   </section>
   <section class="section_inner post_area">
+    <% @posts.each do |post| %>
+      <p class="post_item">
+        <%= post %>
+      </p>
+    <% end %>
   </section>
 </body>
 

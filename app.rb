@@ -6,6 +6,14 @@ require "bundler"
 Bundler.require
 
 get '/' do
+
+  @posts = []
+  File.open("data.txt", "r") do |f|
+    f.each_line do |line|
+      @posts << line
+    end
+  end
+
   erb :index
 end
 
