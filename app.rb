@@ -13,6 +13,7 @@ post '/create' do
   point = params[:point]
   comment = params[:comment]
   "ポイント :#{point}　コメント :#{comment}"
+  redirect '/'
 end
 
 # please access this URL: http://localhost:4567
